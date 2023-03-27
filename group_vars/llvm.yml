@@ -1,0 +1,13 @@
+---
+
+llvm_install_packages:
+  - cmake
+  - gcc
+  - g++
+  - python
+  - zlib
+  - make
+  - bzip2
+  - tar
+  - unzip
+  - zip
