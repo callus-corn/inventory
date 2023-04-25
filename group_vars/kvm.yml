@@ -12,7 +12,7 @@ vm_list:
       expand_partition: /dev/sda2
       expand_lv: /dev/rl/root
     meta:
-      state: start
+      state: none
       host: kvm_1
   - name: rocky_2
     iface_list:
@@ -34,15 +34,15 @@ vm_list:
       - ip: 192.168.1.22
         mac: 3a:e7:d1:12:3b:81
     uuid: 0cfa575f-5407-44aa-1874-384fd549a69a
-    vcpu: 2
-    memory_KiB: "{{ 8 * 1024 * 1024 }}"
+    vcpu: 8
+    memory_KiB: "{{ 32 * 1024 * 1024 }}"
     base_os: rocky9.0
     resized_volume:
       disk_size: 100G
       expand_partition: /dev/sda2
       expand_lv: /dev/rl/root
     meta:
-      state: start
+      state: none
       host: kvm_1
   - name: rocky_4
     iface_list:

@@ -9,20 +9,21 @@ kvm:
       ansible_host: 192.168.1.111
       ansible_user: rocky
 
-llvm:
-  hosts:
-    llvm_1:
-      ansible_host: 192.168.1.20
-      ansible_user: rocky
+# llvm:
+#   hosts:
+#     llvm_1:
+#       ansible_host: 192.168.1.20
+#       ansible_user: rocky
 
 math:
   hosts:
     math_1:
       ansible_host: 192.168.1.21
       ansible_user: rocky
+      ansible_python_interpreter: auto
 
-system:
-  hosts:
-    system_1:
-      ansible_host: 192.168.1.22
-      ansible_user: rocky
+# system:
+#   hosts:
+#     system_1:
+#       ansible_host: 192.168.1.31
+#       ansible_user: ubuntu
