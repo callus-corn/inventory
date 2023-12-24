@@ -13,7 +13,7 @@ host | role | name
 111 | kvm-2 | intel nuc 12th i5
 200 | Switch | Cisco Catalyst WS-C2960CG-8TC-L
 
-## spec catalog
+## flavor catalog
 
 name | vcpu | memory | storage
 --- | --- | --- | ---

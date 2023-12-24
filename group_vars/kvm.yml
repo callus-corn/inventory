@@ -1,16 +1,33 @@
+---
+
+flavor_dict:
+  nuc_12th_i5_max:
+    vcpu: 12
+    memory_KiB: "{{ 64 * 1024 * 1024 }}"
+  nuc_12th_i5_half:
+    vcpu: 6
+    memory_KiB: "{{ 32 * 1024 * 1024 }}"
+  nuc_12th_i5_quarter:
+    vcpu: 3
+    memory_KiB: "{{ 16 * 1024 * 1024 }}"
+
+image_dict:
+  ubuntu22.04:
+    expand_partition: /dev/sda3
+    expand_lv: /dev/ubuntu-vg/ubuntu-lv
+  rocky9.0:
+    expand_partition: /dev/sda2
+    expand_lv: /dev/rl/root
+
 vm_list:
-  - name: ubuntu_1
+  - name: zabbix_1
+    uuid: 912a696b-6a31-3caa-f445-fc30321e7a35
     iface_list:
       - ip: 192.168.1.20
         mac: 2a:7a:b8:15:7c:6a
-    uuid: 912a696b-6a31-3caa-f445-fc30321e7a35
-    vcpu: 3
-    memory_KiB: "{{ 16 * 1024 * 1024 }}"
+    flavor: nuc_12th_i5_quarter
+    volume: 50G
     base_os: ubuntu22.04
-    resized_volume:
-      disk_size: 192G
-      expand_partition: /dev/sda3
-      expand_lv: /dev/ubuntu-vg/ubuntu-lv
     meta:
       state: none
       host: kvm_1
