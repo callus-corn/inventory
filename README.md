@@ -15,8 +15,8 @@ host | role | name
 
 ## flavor catalog
 
-name | vcpu | memory | storage
---- | --- | --- | ---
-max | 12 | 64GB | 768GB
-half | 6 | 32GB | 384GB
-quarter | 3 | 16GB | 192GB
+name | vcpu | memory
+--- | --- | ---
+v8 | 8 | 32GB
+v4 | 4 | 16GB
+v2 | 2 | 8GB

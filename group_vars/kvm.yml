@@ -1,15 +1,15 @@
 ---
 
 flavor_dict:
-  nuc_12th_i5_max:
-    vcpu: 12
-    memory_KiB: "{{ 64 * 1024 * 1024 }}"
-  nuc_12th_i5_half:
-    vcpu: 6
+  v8:
+    vcpu: 8
     memory_KiB: "{{ 32 * 1024 * 1024 }}"
-  nuc_12th_i5_quarter:
-    vcpu: 3
+  v4:
+    vcpu: 4
     memory_KiB: "{{ 16 * 1024 * 1024 }}"
+  v2:
+    vcpu: 2
+    memory_KiB: "{{ 8 * 1024 * 1024 }}"
 
 image_dict:
   ubuntu22.04:
@@ -25,7 +25,7 @@ vm_list:
     iface_list:
       - ip: 192.168.1.20
         mac: 2a:7a:b8:15:7c:6a
-    flavor: nuc_12th_i5_quarter
+    flavor: v2
     volume: 50G
     base_os: ubuntu22.04
     meta:
