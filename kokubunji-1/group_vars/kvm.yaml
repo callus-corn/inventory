@@ -1,0 +1,13 @@
+---
+
+qcow_dir: /var/lib/kvm/qcow
+xml_dir: /var/lib/kvm/xml
+
+vm_list:
+  - name: sw-1
+    base_os: sonic
+    memory_KiB: "{{ 2 * 1024 * 1024 }}"
+    vcpu: 1
+    meta:
+      state: start
+      host: kvm_1
